@@ -1,0 +1,27 @@
+body{
+    background-color:rgb(248, 209, 243);
+}
+.bg-morado{
+    background-color: #5049F2;
+}
+.bg-pinky{
+    background-color:#833471;
+}
+
+.h-100vh{
+    height: 100vh;
+}
+.mtop{
+    margin-top: -400px;
+}
+.icon{
+    width: 20px;
+    height: 20px;
+}
+.ml-rg{
+    margin-left: 850px;
+}
+
+.mt-top{
+    margin-top: -200px;
+}

@@ -1,0 +1,40 @@
+{% load static %}
+{% include 'main.html' %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="input-group mt-5">
+                    <select class="custom-select" id="inputGroupSelect04" >
+                        {% for categories in categories_render %}
+                        <option value=""class="text-black">{{categories.categories}}</option>
+                        {% endfor %}
+                    </select>
+                    <div class="input-group-append">
+                    <button class="btn btn-outline-white bg-pinky text-white" type="submit" href="{%url 'Home'%}">Filtrar</button>
+                    </div>
+                </div>
+                <h3 class=" input-group text-center mb-5 mt-5">Últimas preguntas</h3>
+                
+                {%for questions in questions_render %}
+                <ul>
+                    <a href="{% url 'Answers' questions.id %}" class="mb-3">{{questions.question}}</a>
+                </ul>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}
